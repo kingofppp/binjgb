@@ -44,7 +44,7 @@ Result file_read_aligned(const char* filename, size_t align,
   CHECK_MSG(f, "unable to open file \"%s\".\n", filename);
   long size;
   CHECK(SUCCESS(get_file_size(f, &size)));
-  long aligned_size = ALIGN_UP(size, align);
+  long aligned_size = ALIGN_UP(size, align);//œÚ…œ∂‘∆Î
   u8* data = xcalloc(1, aligned_size);
   CHECK_MSG(data, "allocation failed.\n");
   CHECK_MSG(fread(data, size, 1, f) == 1, "fread failed.\n");

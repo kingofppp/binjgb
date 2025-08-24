@@ -35,7 +35,7 @@ extern "C" {
 #define MEGABYTES(x) ((size_t)(x) * 1024 * 1024)
 #define GIGABYTES(x) ((size_t)(x) * 1024 * 1024 * 1024)
 #define INVALID_TICKS (~0ULL)
-#define ALIGN_UP(x, align) (((x) + (align) - 1) & ~((align) - 1))
+#define ALIGN_UP(x, align) (((x) + (align) - 1) & ~((align) - 1))//这个加上align就是向上对齐，然后清掉低位的值
 #define ALIGN_DOWN(x, align) ((x) & ~((align) - 1))
 #define IS_ALIGNED(x, align) (((x) & ((align) - 1)) == 0)
 

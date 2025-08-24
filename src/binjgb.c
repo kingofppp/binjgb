@@ -518,7 +518,7 @@ int main(int argc, char** argv) {
   host = host_new(&host_init, e);
   CHECK(host != NULL);
 
-  const char* save_filename = replace_extension(s_rom_filename, SAVE_EXTENSION);
+  const char* save_filename = replace_extension(s_rom_filename, SAVE_EXTENSION);//修改扩展名，这个接口不涉及文件操作
   s_save_state_filename =
       replace_extension(s_rom_filename, SAVE_STATE_EXTENSION);
   emulator_read_ext_ram_from_file(e, save_filename);
